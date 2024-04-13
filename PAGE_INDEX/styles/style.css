@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #003366; /* Azul corporativo */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+    background-color: #f0f0f0; /* Gris claro para fondo de secciones */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #003366; /* Azul corporativo */
+    border-bottom: 2px solid #003366; /* Azul corporativo */
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  p {
+    color: #555; /* Gris oscuro para texto */
+    line-height: 1.6;
+  }
+  
+  footer {
+    background-color: #003366; /* Azul corporativo */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .important_font {
+    /* fuente para la informacion */
+    color: rgb(10, 10, 10);
+    font-style: bold;
+    text-decoration: none;
+    font-family: 'arial', Times, serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    /* Add this line to make the text bold */
+}
+
+.parrafo_2 {
+    /*quienes somos*/
+    color: rgb(10, 10, 10);
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 2vw;
+    /* Tamaño de la fuente del 2% del ancho de la ventana */
+    margin: 0;
+    /* Eliminar márgenes para evitar desbordamiento */
+    white-space: nowrap;
+    /* Evitar que el texto se divida en líneas */
+}
+
+
+
+.parrafo {
+    /*se usa para contacto */
+    color: rgb(10, 10, 10);
+    font-style: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 4vw;
+    /* Tamaño de la fuente del 2% del ancho de la ventana */
+    font-family: 'arial', Times, serif;
+    margin: 0;
+    /* Eliminar márgenes para evitar desbordamiento */
+    white-space: nowrap;
+    /* Evitar que el texto se divida en líneas */
+}
+
+
+
+.first_title {
+    /* titulo central */
+    color: rgb(10, 10, 10);
+    font-style: italic;
+    text-decoration: none;
+    font-family: 'monserrat', sans-serif;
+    font-size: 4vw;
+
+}
+
+.title {
+    /*estilo de los titulos */
+    color: rgb(65, 58, 58);
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: 'monserrat', sans-serif;
+    font-size: 4vw;
+    text-decoration: none;
+}

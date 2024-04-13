@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/style.css">    
+        
+</head>
+<body>
+    
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="first_title" href="#">Eshop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page2.html">Registro</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Favoritos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="http://www.google.cl" target="_blank">Google</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-outline-primary" id="carritoBtn" data-bs-toggle="modal" data-bs-target="#carritoModal">Carrito</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="carritoModalLabel">Carrito de compras</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul id="carritoModalContent"></ul>
+                                    
+                                    <ul id="carrito"></ul>
+    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+    <div class="container-fluid">
+        <h1 class="title"> OFERTAS </h1>
+
+    </div>
+    </div>
+    <!-- carrusel -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img title="test_bg" alt="Imagen 1" src="sources/source_1.jpg" class="d-block w-100 img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img title="test_bg" alt="Imagen 2" src="sources/source_2.jpg" class="d-block w-100 img-fluid"
+                    alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img title="test_bg" alt="Imagen 3" src="sources/source_3.jpg" class="d-block w-100 img-fluid"
+                    alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+
+            <!-- PRODUCTOS-->
+            <div class="container container"></div>
+            <section id="Galeria">
+                <h2 class="my-4 text-center">PRODUCTOS</h2>
+                <div class="row text-center">
+                                <!-- PRODUCTOS 0-->
+                    <div class="col">                     
+                            <div class="card" style="width:400px" data-id="3">            <!-- ajustar el tamaño de la card-->
+                            <img class="card-img-top" src="sources/VU-Banana-1000x1000.png" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Banana</h4>
+                                <p class="card-text">¡Plátanos frescos y sabrosos, simplemente deliciosos! ¡Ordénalos ahora!</p>
+                                <p class="card-text">Stock : 20</p>
+                                <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                <button class="agregar">Agregar al carrito</button> 
+                            </div>
+                        </div>
+                    </div>
+                  <!-- PRODUCTOS 1-->
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/beer.webp" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="card-title">Cerveza</h4>
+                                    <p class="card-text">¡Cerveza artesanal premium, disfruta del sabor único en cada sorbo! ¡Compra ahora!</p>
+                                    <p class="card-text">Stock: 10</p>
+                                    <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                    <button class="agregar">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- PRODUCTOS 2-->
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/reloj.webp" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="card-title">Casio 430</h4>
+                                    <p class="card-text">¡Reloj Casio, estilo y precisión en tu muñeca! Diseño duradero y funciones avanzadas para acompañarte en cada momento. ¡Hazte con el tuyo ahora!</p>
+                                    <p class="card-text">Stock: 10</p>
+                                    <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                    <button class="agregar">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- PRODUCTOS 3-->
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/cup.webp" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="card-title">Botella</h4>
+                                    <p class="card-text">¡Botella de agua, hidratación en cualquier momento! Llévala contigo a donde vayas y mantente fresco y saludable. ¡Compra la tuya ahora!</p>
+                                    <p class="card-text">Stock: 10</p>
+                                    <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                    <button class="agregar">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                            <!-- PRODUCTOS 4-->
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/guitarra.webp" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Guitarra</h4>
+                                <p class="card-text">¡Guitarra: tu melodía personal! Descubre la pasión de la música con nuestra selección de guitarras, calidad y sonido excepcionales. ¡Empieza a tocar hoy mismo!</p>
+                                <p class="card-text">Stock: 1</p>
+                                <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                <button class="agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- PRODUCTOS 5 -->
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/neb.jpg" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Nebilet</h4>
+                                <p class="card-text">¡Nebilet: controla tu presión arterial con confianza! Fórmula eficaz para un corazón saludable. ¡Consigue el tuyo ahora!</p>
+                                <p class="card-text">Sin Stock</p>
+                                <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                <button class="agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- PRODUCTOS 6-->
+                    <div class="col">
+                        <div class="card" style="width:400px" >
+                            <img class="card-img-top" src="sources/disipador.jpg" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Disipador Liquido</h4>
+                                <p class="card-text">¡Disipador líquido: enfriamiento máximo para tu PC! Mantén tus componentes frescos y rendimiento óptimo. ¡Compra el tuyo ahora!</p>
+                                <p class="card-text">Stock: 7</p>
+                                <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                <button class="agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- PRODUCTOS 7-->
+                    <div class="col">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="sources/mesa.webp" height="300" width="190" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Mesa de noche </h4>
+                                <p class="card-text">¡Mesa de noche: funcionalidad y estilo en tu dormitorio! Organiza tus objetos personales y complementa tu decoración. ¡Hazla tuya ahora!</p>
+                                <p class="card-text">Stock: 12</p>
+                                <button class="btn btn-primary" onclick="openModal()">Reclamos</button>
+                                <button class="agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal y card -->
+    <div id="myModal" class="modal">
+        <!-- Agregar el contenedor de Bootstrap -->
+        <div class="container">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Reclamos</h2>
+                <p>
+                    <form>
+                        <label for="rut">RUT:</label><br>
+                        <input type="text" id="rut" name="rut"><br>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre"><br>
+                        <label for="telefono">Teléfono:</label><br>
+                        <input type="tel" id="telefono" name="telefono"><br>
+                        <label for="correo">Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo"><br>
+                        <label for="correo">Contenido del mensaje</label><br>
+                        <input type="email" id="correo" name="correo"><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card2">
+    <h2 class="parrafo">contacto</h2>
+
+    <p class="important_font">contact@gmail.com</p>
+    <p class="important_font">+56 948090582 </p>
+    <p class="important_font">Maipu </p>
+</div> 
+
+
+
+
+
+
+
+    <!-- script para agregar items al carrito-->
+
+
+<script>
+    // Inicializar el carrito como un array vacío
+    var carrito = [];
+
+    // Agregar controladores de eventos a los botones "Agregar al carrito"
+
+    var botones = document.querySelectorAll('.agregar');
+    botones.forEach(function(boton) {
+        boton.addEventListener('click', function(event) {
+            // Obtener el ID del producto desde el atributo "data-id" de la tarjeta
+            var idProducto = event.target.parentElement.getAttribute('data-id');
+            
+            // Agregar el producto al carrito
+            carrito.push(idProducto);
+            
+            // Actualizar la interfaz del carrito
+            var listaCarrito = document.getElementById('carrito');
+            var elementoLista = document.createElement('li');
+            elementoLista.textContent = 'Producto ' + idProducto;
+            listaCarrito.appendChild(elementoLista);
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    // Función para abrir el modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
